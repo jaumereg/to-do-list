@@ -1,0 +1,101 @@
+2017-05-29T08:19:31.336881+00:00 app[api]: Set DB_URL config vars by user jaumeregas1@gmail.com
+2017-05-29T08:19:31.336881+00:00 app[api]: Release v4 created by user jaumeregas1@gmail.com
+2017-05-29T08:19:31.917737+00:00 heroku[web.1]: State changed from crashed to starting
+2017-05-29T08:19:39.786209+00:00 heroku[web.1]: Starting process with command `npm start`
+2017-05-29T08:19:43.921273+00:00 app[web.1]:
+2017-05-29T08:19:43.921288+00:00 app[web.1]: > to-do-list@1.0.0 start /app
+2017-05-29T08:19:43.921289+00:00 app[web.1]: > node server/app.js
+2017-05-29T08:19:43.921290+00:00 app[web.1]:
+2017-05-29T08:19:44.374636+00:00 app[api]: Set NODE_ENV config vars by user jaumeregas1@gmail.com
+2017-05-29T08:19:44.374636+00:00 app[api]: Release v5 created by user jaumeregas1@gmail.com
+2017-05-29T08:19:44.995696+00:00 heroku[web.1]: Restarting
+2017-05-29T08:19:44.864063+00:00 app[web.1]: Listening on PORT 15510
+2017-05-29T08:19:45.090740+00:00 app[web.1]: Db.prototype.authenticate method will no longer be available in the next major release 3.x as MongoDB 3.6 will only allow auth against users in the admin db and will no longer allow multiple credentials on a socket. Please authenticate using MongoClient.connect with auth credentials.
+2017-05-29T08:19:45.202458+00:00 app[web.1]:
+2017-05-29T08:19:45.202468+00:00 app[web.1]: events.js:160
+2017-05-29T08:19:45.202470+00:00 app[web.1]:       throw er; // Unhandled 'error' event
+2017-05-29T08:19:45.202470+00:00 app[web.1]:       ^
+2017-05-29T08:19:45.207318+00:00 app[web.1]: MongoError: Authentication failed.
+2017-05-29T08:19:45.207320+00:00 app[web.1]:     at Function.MongoError.create (/app/node_modules/mongodb-core/lib/error.js:31:11)
+2017-05-29T08:19:45.207321+00:00 app[web.1]:     at /app/node_modules/mongodb-core/lib/connection/pool.js:497:72
+2017-05-29T08:19:45.207322+00:00 app[web.1]:     at authenticateStragglers (/app/node_modules/mongodb-core/lib/connection/pool.js:443:16)
+2017-05-29T08:19:45.207322+00:00 app[web.1]:     at Connection.messageHandler (/app/node_modules/mongodb-core/lib/connection/pool.js:477:5)
+2017-05-29T08:19:45.207323+00:00 app[web.1]:     at Socket.<anonymous> (/app/node_modules/mongodb-core/lib/connection/connection.js:321:22)
+2017-05-29T08:19:45.207324+00:00 app[web.1]:     at emitOne (events.js:96:13)
+2017-05-29T08:19:45.207324+00:00 app[web.1]:     at Socket.emit (events.js:188:7)
+2017-05-29T08:19:45.207325+00:00 app[web.1]:     at readableAddChunk (_stream_readable.js:176:18)
+2017-05-29T08:19:45.207325+00:00 app[web.1]:     at Socket.Readable.push (_stream_readable.js:134:10)
+2017-05-29T08:19:45.207326+00:00 app[web.1]:     at TCP.onread (net.js:547:20)
+2017-05-29T08:19:45.256300+00:00 app[web.1]:
+2017-05-29T08:19:45.305253+00:00 app[web.1]: npm ERR! Linux 3.13.0-112-generic
+2017-05-29T08:19:45.306346+00:00 app[web.1]: npm ERR! argv "/app/.heroku/node/bin/node" "/app/.heroku/node/bin/npm" "start"
+2017-05-29T08:19:45.306620+00:00 app[web.1]: npm ERR! node v6.10.3
+2017-05-29T08:19:45.306898+00:00 app[web.1]: npm ERR! npm  v3.10.10
+2017-05-29T08:19:45.308997+00:00 app[web.1]: npm ERR! code ELIFECYCLE
+2017-05-29T08:19:45.309228+00:00 app[web.1]: npm ERR! to-do-list@1.0.0 start: `node server/app.js`
+2017-05-29T08:19:45.309428+00:00 app[web.1]: npm ERR! Exit status 1
+2017-05-29T08:19:45.309644+00:00 app[web.1]: npm ERR!
+2017-05-29T08:19:45.309844+00:00 app[web.1]: npm ERR! Failed at the to-do-list@1.0.0 start script 'node server/app.js'.
+2017-05-29T08:19:45.310046+00:00 app[web.1]: npm ERR! Make sure you have the latest version of node.js and npm installed.
+2017-05-29T08:19:45.310243+00:00 app[web.1]: npm ERR! If you do, this is most likely a problem with the to-do-list package,
+2017-05-29T08:19:45.310441+00:00 app[web.1]: npm ERR! not with npm itself.
+2017-05-29T08:19:45.310764+00:00 app[web.1]: npm ERR! Tell the author that this fails on your system:
+2017-05-29T08:19:45.310982+00:00 app[web.1]: npm ERR!     node server/app.js
+2017-05-29T08:19:45.314090+00:00 app[web.1]: npm ERR! You can get information on how to open an issue for this project with:
+2017-05-29T08:19:45.314236+00:00 app[web.1]: npm ERR!     npm bugs to-do-list
+2017-05-29T08:19:45.314522+00:00 app[web.1]: npm ERR!     npm owner ls to-do-list
+2017-05-29T08:19:45.314376+00:00 app[web.1]: npm ERR! Or if that isn't available, you can get their info via:
+2017-05-29T08:19:45.320275+00:00 app[web.1]:
+2017-05-29T08:19:45.314740+00:00 app[web.1]: npm ERR! There is likely additional logging output above.
+2017-05-29T08:19:45.331369+00:00 app[web.1]: npm ERR! Please include the following file with any support request:
+2017-05-29T08:19:45.331551+00:00 app[web.1]: npm ERR!     /app/npm-debug.log
+2017-05-29T08:19:45.466847+00:00 heroku[web.1]: Process exited with status 1
+2017-05-29T08:19:51.764333+00:00 heroku[web.1]: Starting process with command `npm start`
+2017-05-29T08:19:54.380033+00:00 app[web.1]:
+2017-05-29T08:19:54.380051+00:00 app[web.1]: > to-do-list@1.0.0 start /app
+2017-05-29T08:19:54.380052+00:00 app[web.1]: > node server/app.js
+2017-05-29T08:19:54.380052+00:00 app[web.1]:
+2017-05-29T08:19:54.992670+00:00 app[web.1]: Listening on PORT 29070
+2017-05-29T08:19:55.176842+00:00 app[web.1]: Db.prototype.authenticate method will no longer be available in the next major release 3.x as MongoDB 3.6 will only allow auth against users in the admin db and will no longer allow multiple credentials on a socket. Please authenticate using MongoClient.connect with auth credentials.
+2017-05-29T08:19:55.265928+00:00 app[web.1]:
+2017-05-29T08:19:55.265940+00:00 app[web.1]: events.js:160
+2017-05-29T08:19:55.265942+00:00 app[web.1]:       ^
+2017-05-29T08:19:55.265941+00:00 app[web.1]:       throw er; // Unhandled 'error' event
+2017-05-29T08:19:55.266588+00:00 app[web.1]: MongoError: Authentication failed.
+2017-05-29T08:19:55.266589+00:00 app[web.1]:     at Function.MongoError.create (/app/node_modules/mongodb-core/lib/error.js:31:11)
+2017-05-29T08:19:55.266590+00:00 app[web.1]:     at /app/node_modules/mongodb-core/lib/connection/pool.js:497:72
+2017-05-29T08:19:55.266590+00:00 app[web.1]:     at authenticateStragglers (/app/node_modules/mongodb-core/lib/connection/pool.js:443:16)
+2017-05-29T08:19:55.266591+00:00 app[web.1]:     at Connection.messageHandler (/app/node_modules/mongodb-core/lib/connection/pool.js:477:5)
+2017-05-29T08:19:55.266591+00:00 app[web.1]:     at Socket.<anonymous> (/app/node_modules/mongodb-core/lib/connection/connection.js:321:22)
+2017-05-29T08:19:55.266592+00:00 app[web.1]:     at emitOne (events.js:96:13)
+2017-05-29T08:19:55.266592+00:00 app[web.1]:     at Socket.emit (events.js:188:7)
+2017-05-29T08:19:55.266592+00:00 app[web.1]:     at readableAddChunk (_stream_readable.js:176:18)
+2017-05-29T08:19:55.266593+00:00 app[web.1]:     at Socket.Readable.push (_stream_readable.js:134:10)
+2017-05-29T08:19:55.266593+00:00 app[web.1]:     at TCP.onread (net.js:547:20)
+2017-05-29T08:19:55.273790+00:00 app[web.1]:
+2017-05-29T08:19:55.281096+00:00 app[web.1]: npm ERR! Linux 3.13.0-112-generic
+2017-05-29T08:19:55.281377+00:00 app[web.1]: npm ERR! argv "/app/.heroku/node/bin/node" "/app/.heroku/node/bin/npm" "start"
+2017-05-29T08:19:55.281588+00:00 app[web.1]: npm ERR! node v6.10.3
+2017-05-29T08:19:55.281725+00:00 app[web.1]: npm ERR! npm  v3.10.10
+2017-05-29T08:19:55.281853+00:00 app[web.1]: npm ERR! code ELIFECYCLE
+2017-05-29T08:19:55.281975+00:00 app[web.1]: npm ERR! to-do-list@1.0.0 start: `node server/app.js`
+2017-05-29T08:19:55.282063+00:00 app[web.1]: npm ERR! Exit status 1
+2017-05-29T08:19:55.282170+00:00 app[web.1]: npm ERR!
+2017-05-29T08:19:55.282283+00:00 app[web.1]: npm ERR! Failed at the to-do-list@1.0.0 start script 'node server/app.js'.
+2017-05-29T08:19:55.282459+00:00 app[web.1]: npm ERR! If you do, this is most likely a problem with the to-do-list package,
+2017-05-29T08:19:55.282375+00:00 app[web.1]: npm ERR! Make sure you have the latest version of node.js and npm installed.
+2017-05-29T08:19:55.282540+00:00 app[web.1]: npm ERR! not with npm itself.
+2017-05-29T08:19:55.282648+00:00 app[web.1]: npm ERR! Tell the author that this fails on your system:
+2017-05-29T08:19:55.282712+00:00 app[web.1]: npm ERR!     node server/app.js
+2017-05-29T08:19:55.282797+00:00 app[web.1]: npm ERR! You can get information on how to open an issue for this project with:
+2017-05-29T08:19:55.282885+00:00 app[web.1]: npm ERR!     npm bugs to-do-list
+2017-05-29T08:19:55.282965+00:00 app[web.1]: npm ERR! Or if that isn't available, you can get their info via:
+2017-05-29T08:19:55.283049+00:00 app[web.1]: npm ERR!     npm owner ls to-do-list
+2017-05-29T08:19:55.283132+00:00 app[web.1]: npm ERR! There is likely additional logging output above.
+2017-05-29T08:19:55.286414+00:00 app[web.1]:
+2017-05-29T08:19:55.286713+00:00 app[web.1]: npm ERR! Please include the following file with any support request:
+2017-05-29T08:19:55.286774+00:00 app[web.1]: npm ERR!     /app/npm-debug.log
+2017-05-29T08:19:55.359058+00:00 heroku[web.1]: State changed from starting to crashed
+2017-05-29T08:19:55.346586+00:00 heroku[web.1]: Process exited with status 1
+2017-05-29T08:19:57.527464+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=guarded-caverns-86940.herokuapp.com request_id=2ba681f4-18be-4db0-a65e-6be3cb3d1626 fwd="80.33.152.186" dyno= connect= service= status=503 bytes= protocol=https
+2017-05-29T08:19:57.895764+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=guarded-caverns-86940.herokuapp.com request_id=2a28f070-6c3e-4c50-abb5-ef339e623942 fwd="80.33.152.186" dyno= connect= service= status=503 bytes= protocol=https
