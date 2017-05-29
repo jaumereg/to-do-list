@@ -1,24 +1,37 @@
-const express = require('express')
-const path = require('path')
+const express = require ('express')
 const bodyParser = require('body-parser')
+const path = require('path')
+const mongoose = require('mongoose')
+
+const routerTasks = require('./routes/tasks')
+const routerTask = require('./routes/task')
+
+const apiKey = require('./routes/middlewares/apikey')
+
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config()
+}
+
+// const dbUrl = 'mongodb://localhost:27017/test'
+// const PORT = 3000
+const dbUrl = process.env.DB_URL
+const PORT = process.env.PORT
 
 const app = express()
-const PORT = 3000
 
-// const taskRoutes = require('./routes/task')
-// const tasksRoutes = require('./routes/tasks')
+mongoose.Promise = Promise
+mongoose.connect(dbUrl)
 
-app.use(bodyParser.urlencoded({
-  extended: false
-}))
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 app.use(express.static( path.join(__dirname, '../client')  ))
 app.set('view engine', 'pug')
 app.set('views', path.join(__dirname, '/views'));
 
-app.get('/', (req, res) => {
-	res.render('list')
-})
+app.get('/', (req, res) => res.redirect('/tasks'))
+app.use(apiKey)
+app.use('/tasks', routerTasks)
+app.use('/task', routerTask)
 
-app.listen(PORT, () => console.log(`Listening from PORT ${PORT}`))
+app.listen(PORT, () => console.log(`Listening on PORT ${PORT}`))

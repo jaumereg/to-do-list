@@ -1,16 +1,17 @@
 {
   "name": "to-do-list",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "authors": [
     "Jaume Regas <jaumeregas1@gmail.com>"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/jaumereg/to-do-list",
+  "homepage": "",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
+    "client/bower_components",
     "test",
     "tests"
   ],

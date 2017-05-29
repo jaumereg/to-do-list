@@ -2,18 +2,23 @@
   "name": "to-do-list",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node server/app",
-    "dev": "forever start server/app.js",
-    "stop": "forever stop server/app.js"
+    "start": "node server/app.js",
+    "dev": "supervisor server/app.js",
+    "dev:debug": "set DEBUG=*"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.2",
+    "debug": "^2.6.8",
     "express": "^4.15.3",
+    "mongoose": "^4.10.2",
     "pug": "^2.0.0-rc.1"
+  },
+  "devDependencies": {
+    "dotenv": "^4.0.0"
   }
 }

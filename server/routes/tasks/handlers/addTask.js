@@ -8,11 +8,12 @@ function addTask(req,res) {
   newTask
     .save()
     .then( msg => {
-      res.json(msg)
+      res.redirect('/tasks')
+      // res.json(msg)
     })
     .catch( err => {
       res.json(err)
     })
 }
 
-module.exports = addTask
+module.exports = addTask 

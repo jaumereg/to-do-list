@@ -2,5 +2,27 @@ extends layout
 
 block content
 
-  .container
-     h1 Working!
+	.container
+		.row
+			.col-md-8.col-md-offset-2
+				h1.title List Tasks
+				form.search-bar(action='/tasks', method='POST')
+					.input-group
+						input#todo.form-control.add-todo(name="title", type='text', placeholder='Add task', autofocus)
+						span.input-group-btn
+							button#checkAll.add-task.btn.btn-default(type='button') Add
+				hr
+				ul#sortable.list-unstyled.list-group.list-users
+					each task in tasks
+						li.list-group-item
+							.content
+								p #{task.title} 
+								form.edit-form(action=`/task/${task.id}`)
+									input.input-sm.hidden(type='text', placeholder='Write the edited task', autofocus)
+							.edition
+								a.btn.btn-primary.btn-sm.edit(href=`/task/${task.id}`)
+									i.glyphicon.glyphicon-edit
+								a.btn.btn-danger.btn-sm.remove(href=`/task/${task.id}`)
+									i.glyphicon.glyphicon-remove
+								a.btn.btn-success.btn-sm.complete(href=`/task/${task.id}`)
+									i.glyphicon.glyphicon-ok
